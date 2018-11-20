@@ -125,16 +125,19 @@
                 <th>Start Date</th>
               </tr>
             <?php
-            if (!$config = parse_ini_file('../dbinfo.ini.php')) {
-                echo "Error: Database info ini cannot be read";
-            }
-            $connectionInfo = array("UID" => $config["username"], "pwd" => $config["password"], "Database" => $config["dbname"], "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-            $serverName = "tcp: final-proj-t1.database.windows.net,1433";
-            $conn = sqlsrv_connect($serverName, $connectionInfo);
-            if (!$conn) {
-                echo "Connection could not be established.<br />";
-                die(print_r(sqlsrv_errors(), true));
-            }
+        try {
+          $conn = new PDO("sqlsrv:server = tcp:final-proj-t1.database.windows.net,1433; Database = final_proj_t1", "joey", "{#Kangar88}");
+          $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      }
+      catch (PDOException $e) {
+          print("Error connecting to SQL Server.");
+          die(print_r($e));
+      }
+      
+      // SQL Server Extension Sample Code:
+      $connectionInfo = array("UID" => "joey@final-proj-t1", "pwd" => "{#Kangar88}", "Database" => "final_proj_t1", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+      $serverName = "tcp:final-proj-t1.database.windows.net,1433";
+      $conn = sqlsrv_connect($serverName, $connectionInfo);
             $sql = "SELECT * FROM Employee";
             $stmt = sqlsrv_query($conn, $sql);
             if ($stmt === false) {
