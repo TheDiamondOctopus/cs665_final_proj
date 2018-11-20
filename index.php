@@ -73,10 +73,10 @@
                         </div>
                       </div>
         </div>  
-        <?php
+        <script>
           var fname = document.getElementById("validationCustom1").value;
           console.log(fname);
-        ?>
+        </script>
         <!-- This is the Employee's BU Email Address -->
         <label for="inputEmail">BU Email Address</label>
         <div class="form-row">
