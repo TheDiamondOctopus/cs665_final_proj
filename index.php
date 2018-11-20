@@ -110,6 +110,49 @@
         
         <button class="btn btn-primary" type="submit">Submit form</button>
       </form>
+
+      <br>
+      <br>
+
+      <div class="container">
+          <div class="row">
+            <table class="text-center" style="align-content: center">
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Department</th>
+                <th>Start Date</th>
+              </tr>
+            <?php
+            if (!$config = parse_ini_file('../dbinfo.ini.php')) {
+                echo "Error: Database info ini cannot be read";
+            }
+            $connectionInfo = array("UID" => $config["username"], "pwd" => $config["password"], "Database" => $config["dbname"], "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+            $serverName = "tcp: final-proj-t1.database.windows.net,1433";
+            $conn = sqlsrv_connect($serverName, $connectionInfo);
+            if (!$conn) {
+                echo "Connection could not be established.<br />";
+                die(print_r(sqlsrv_errors(), true));
+            }
+            $sql = "SELECT * FROM Employee";
+            $stmt = sqlsrv_query($conn, $sql);
+            if ($stmt === false) {
+                die(print_r(sqlsrv_errors(), true));
+            }
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                echo "<tr>";
+                echo "<td>".$row['FirstName']."</td>";
+                echo "<td>".$row['LastName']."</td>";
+                echo "<td>".$row['EmailAddress']."</td>";
+                echo "<td>".$row['Department']."</td>";
+                echo "<td>".$row['StartDate']."</td>";
+                echo "</tr>";
+            }
+            ?>
+            </table>
+          </div>
+        </div>
 </body>
 
 </html>
