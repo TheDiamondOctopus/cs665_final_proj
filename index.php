@@ -73,6 +73,10 @@
                         </div>
                       </div>
         </div>  
+        <?php
+          var fname = document.getElementById("validationCustom1").value;
+          console.log(fname);
+        ?>
         <!-- This is the Employee's BU Email Address -->
         <label for="inputEmail">BU Email Address</label>
         <div class="form-row">
@@ -111,6 +115,8 @@
         <button class="btn btn-primary" type="submit">Submit form</button>
       </form>
 
+
+      <!-- The below code deals with grabbing the data from the dbo.Employee table on the MS SQL Server -->
       <br>
       <br>
 
@@ -125,19 +131,20 @@
                 <th>Start Date</th>
               </tr>
             <?php
-        try {
-          $conn = new PDO("sqlsrv:server = tcp:final-proj-t1.database.windows.net,1433; Database = final_proj_t1", "joey", "{#Kangar88}");
-          $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      }
-      catch (PDOException $e) {
-          print("Error connecting to SQL Server.");
-          die(print_r($e));
-      }
-      
-      // SQL Server Extension Sample Code:
-      $connectionInfo = array("UID" => "joey@final-proj-t1", "pwd" => "{#Kangar88}", "Database" => "final_proj_t1", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-      $serverName = "tcp:final-proj-t1.database.windows.net,1433";
-      $conn = sqlsrv_connect($serverName, $connectionInfo);
+            try {
+                $conn = new PDO("sqlsrv:server = tcp:final-proj-t1.database.windows.net,1433; Database = final_proj_t1", "joey", "{#Kangar88}");
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            }
+            catch (PDOException $e) {
+                print("Error connecting to SQL Server.");
+                die(print_r($e));
+            }
+            
+            //Code to connect to SQL Server -- Should be moved elsewhere since it contains a username and password to conncet to the DB:
+            $connectionInfo = array("UID" => "joey@final-proj-t1", "pwd" => "{#Kangar88}", "Database" => "final_proj_t1", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+            $serverName = "tcp:final-proj-t1.database.windows.net,1433";
+            $conn = sqlsrv_connect($serverName, $connectionInfo);
+
             $sql = "SELECT * FROM Employee";
             $stmt = sqlsrv_query($conn, $sql);
             if ($stmt === false) {
