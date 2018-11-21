@@ -61,20 +61,20 @@
         <label for="validationCustom01">Name</label>
         <div class="form-row">
                 <div class="col-md-4 mb-3">
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="First Name" value="" required>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First Name" value="fname" required>
                         <div class="valid-feedback">
                           Looks good!
                         </div>
                       </div>
                 <div class="col-md-4 mb-3">
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last Name" value="" required>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last Name" value="lname" required>
                         <div class="valid-feedback">
                           Looks good!
                         </div>
                       </div>
         </div>  
         <script>
-          var fname = document.getElementById("validationCustom1").value;
+          var fname = document.getElementById("validationCustom01").value;
           console.log(fname);
         </script>
         <!-- This is the Employee's BU Email Address -->
