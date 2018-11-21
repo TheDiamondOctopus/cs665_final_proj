@@ -61,13 +61,13 @@
         <label for="validationCustom01">Name</label>
         <div class="form-row">
                 <div class="col-md-4 mb-3">
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="First Name" required>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="First Name" value="" required>
                         <div class="valid-feedback">
                           Looks good!
                         </div>
                       </div>
                 <div class="col-md-4 mb-3">
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last Name" required>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last Name" value="" required>
                         <div class="valid-feedback">
                           Looks good!
                         </div>
