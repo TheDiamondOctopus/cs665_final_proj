@@ -51,7 +51,7 @@
     </script>
 
    <script>
-        handleSubmitButton(){
+        function handleSubmitButton(){
           var fname = document.getElementById("validationCustom01").value;
           console.log(fname);
         }
