@@ -62,6 +62,11 @@
         }
         </script>
 
+  <?php
+    function phpSubmitButton(){
+      echo "this worked!";
+    }
+  ?>
 
 
 
@@ -124,7 +129,7 @@
                   </div>
         </div>    
         
-        <button class="btn btn-primary" type="button" onClick="handleSubmitButton()">Submit form</button>
+        <button class="btn btn-primary" type="button" onClick="phpSubmitButton()">Submit form</button>
       </form>
 
 
