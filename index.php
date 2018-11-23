@@ -53,7 +53,12 @@
    <script>
         function handleSubmitButton(){
           var fname = document.getElementById("validationCustom01").value;
-          console.log(fname);
+          var lname = document.getElementById("validationCustom02").value;
+          var email = document.getElementById("inputEmail").value;
+          var dept = document.getElementById("departmentSelection").value;
+          var startDate = document.getElementById("date").value;
+
+          console.log(fname, ",", lname, ",", email, ",", dept, ",", startDate);
         }
         </script>
 
@@ -98,7 +103,7 @@
         <label for="inputEmail">Department</label>
         <div class="form-row">
                 <div class="form-group">
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="departmentSelection">
                             <option value="Career Services">Career Services</option>
                             <option value="CIMS">CIMS</option>
                             <option value="COMIT">COMIT</option>
