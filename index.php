@@ -58,7 +58,7 @@
           var dept = document.getElementById("departmentSelection").value;
           var startDate = document.getElementById("date").value;
 
-          console.log(fname, ",", lname, ",", email, ",", dept, ",", startDate);
+          console.log(fname + "," + lname + "," + email + "," + dept + "," + startDate);
         }
         </script>
 
