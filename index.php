@@ -129,7 +129,7 @@
                   </div>
         </div>    
         
-        <button class="btn btn-primary" type="button" onClick="phpSubmitButton()">Submit form</button>
+        <button class="btn btn-primary" type="submit" onClick="phpSubmitButton()">Submit form</button>
       </form>
 
 
