@@ -30,7 +30,7 @@
                 (?, ?, ?, ?, ?, ?)";  
 
         /* Set parameter values. */  
-        $params = array('3', '$FirstName', '$LastName', '$EmailAddress', '$Department', '$StartDate');  
+        $params = array(rand(3,1000), $FirstName, $LastName, $EmailAddress, $Department, $StartDate);  
 
         /* Prepare and execute the query. */  
         $stmt = sqlsrv_query($conn, $tsql, $params);  
