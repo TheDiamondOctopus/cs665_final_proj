@@ -61,7 +61,7 @@
           console.log(fname + "," + lname + "," + email + "," + dept + "," + startDate);
         }
         </script>
-        
+
     <title>New Employee Form</title>
 </head>
 
@@ -121,7 +121,7 @@
                   </div>
         </div>    
         
-        <button class="btn btn-primary" type="submit" onClick="phpSubmitButton()">Submit form</button>
+        <button class="btn btn-primary" type="submit">Submit form</button>
       </form>
 
 
