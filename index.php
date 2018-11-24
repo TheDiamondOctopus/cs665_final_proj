@@ -52,11 +52,11 @@
 
    <script>
         function handleSubmitButton(){
-          var fname = document.getElementById("validationCustom01").value;
-          var lname = document.getElementById("validationCustom02").value;
+          var fname = document.getElementById("firstName").value;
+          var lname = document.getElementById("lastName").value;
           var email = document.getElementById("inputEmail").value;
           var dept = document.getElementById("departmentSelection").value;
-          var startDate = document.getElementById("date").value;
+          var startDate = document.getElementById("startDate").value;
 
           console.log(fname + "," + lname + "," + email + "," + dept + "," + startDate);
         }
@@ -74,13 +74,13 @@
         <label for="validationCustom01">Name</label>
         <div class="form-row">
                 <div class="col-md-4 mb-3">
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="First Name" value="" required>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" value="" required>
                         <div class="valid-feedback">
                           Looks good!
                         </div>
                       </div>
                 <div class="col-md-4 mb-3">
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last Name" value="" required>
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" value="" required>
                         <div class="valid-feedback">
                           Looks good!
                         </div>
@@ -90,17 +90,17 @@
         <label for="inputEmail">BU Email Address</label>
         <div class="form-row">
                 <div class="col-md-4 mb-3">
-                        <input type="text" class="form-control" id="inputEmail" placeholder="Email" required>
+                        <input type="text" class="form-control" id="inputEmail" name="emailAddress" placeholder="Email" required>
                         <div class="valid-feedback">
                           Looks good!
                         </div>
                       </div>
         </div> 
         <!-- This is for the Employee's Department in the College of Communication (COM) -->
-        <label for="inputEmail">Department</label>
+        <label for="department">Department</label>
         <div class="form-row">
                 <div class="form-group">
-                        <select class="form-control" id="departmentSelection">
+                        <select class="form-control" id="departmentSelection" name="department">
                             <option value="Career Services">Career Services</option>
                             <option value="CIMS">CIMS</option>
                             <option value="COMIT">COMIT</option>
@@ -114,64 +114,24 @@
                     </div>
         </div> 
         <!-- This is for the Employee's Start Date at COM -->
-        <label for="inputEmail">Start Date</label>
+        <label for="startDate">Start Date</label>
         <div class="form-row">
                 <div class="form-group"> <!-- Date input -->
-                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                    <input class="form-control" id="startDate" name="startDate" placeholder="MM/DD/YYY" type="text"/>
                   </div>
         </div>    
+
+        <input class="btn btn-primary" type="submit" value="Submit Form">
         
-        <button class="btn btn-primary" type="submit">Submit form</button>
-      </form>
+<!--         <button class="btn btn-primary" type="submit">Submit form</button>
+ -->      </form>
 
 
       <!-- The below code deals with grabbing the data from the dbo.Employee table on the MS SQL Server -->
       <br>
       <br>
 
-      <div class="container">
-          <div class="row">
-            <table class="text-center" style="align-content: center">
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email Address</th>
-                <th>Department</th>
-                <th>Start Date</th>
-              </tr>
-            <?php
-            try {
-                $conn = new PDO("sqlsrv:server = tcp:final-proj-t1.database.windows.net,1433; Database = final_proj_t1", "joey", "{#Kangar88}");
-                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            }
-            catch (PDOException $e) {
-                print("Error connecting to SQL Server.");
-                die(print_r($e));
-            }
-            
-            //Code to connect to SQL Server -- Should be moved elsewhere since it contains a username and password to conncet to the DB:
-            $connectionInfo = array("UID" => "joey@final-proj-t1", "pwd" => "{#Kangar88}", "Database" => "final_proj_t1", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-            $serverName = "tcp:final-proj-t1.database.windows.net,1433";
-            $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-            $sql = "SELECT * FROM Employee";
-            $stmt = sqlsrv_query($conn, $sql);
-            if ($stmt === false) {
-                die(print_r(sqlsrv_errors(), true));
-            }
-            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
-                echo "<tr>";
-                echo "<td>".$row['FirstName']."</td>";
-                echo "<td>".$row['LastName']."</td>";
-                echo "<td>".$row['EmailAddress']."</td>";
-                echo "<td>".$row['Department']."</td>";
-                echo "<td>".$row['StartDate']."</td>";
-                echo "</tr>";
-            }
-            ?>
-            </table>
-          </div>
-        </div>
 </body>
 
 </html>
