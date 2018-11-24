@@ -61,15 +61,7 @@
           console.log(fname + "," + lname + "," + email + "," + dept + "," + startDate);
         }
         </script>
-
-  <?php
-    function phpSubmitButton(){
-      echo "this worked!";
-    }
-  ?>
-
-
-
+        
     <title>New Employee Form</title>
 </head>
 
@@ -77,7 +69,7 @@
 <body>
     <h1>New Employee Form</h1>
     <br>
-    <form class="needs-validation" novalidate>
+    <form class="needs-validation" novalidate action="submit.php" method="post">
         <!-- The below is for the Employee name, includes First and Last Names -->
         <label for="validationCustom01">Name</label>
         <div class="form-row">
