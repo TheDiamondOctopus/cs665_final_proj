@@ -131,6 +131,11 @@
       <br>
       <br>
 
+      <form action="https://cs665phptest1.azurewebsites.net/submit.php">
+        <input type="submit" value="New Employee Form"/>
+      </form>
+
+
 
 </body>
 
