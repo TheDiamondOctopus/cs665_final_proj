@@ -132,7 +132,7 @@
       <br>
 
       <form action="https://cs665phptest1.azurewebsites.net/submit.php">
-        <input type="submit" value="New Employee Form"/>
+        <input class="btn btn-primary" type="submit" value="New Employee Form"/>
       </form>
 
 
