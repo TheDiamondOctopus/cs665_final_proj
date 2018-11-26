@@ -26,7 +26,9 @@
 
 <div class="container">
                 <div class="row">
-                    <table class="text-center" style="align-content: center">
+                    <table>
+<!--                     <table class="text-center" style="align-content: center">
+ -->
                     <tr>
                         <th>First Name</th>
                         <th>Last Name</th>
