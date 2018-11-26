@@ -2,7 +2,8 @@ body{
     margin: 50px;
 }
 
-element[style]{
+element.style{
     top: 160px !important;
     left: 50px !important;
+    display: block !important;
 } 
