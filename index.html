@@ -109,7 +109,8 @@ $(document).ready(function(){
 
 <script>
   function successDiv(){
-    var x = document.getElementById("formSubmittedDiv").style.display = "block";
+    document.getElementById("formSubmittedDiv").style.display = "block";
+    document.getElementById("newEmployeeForm").reset();
   }
 </script>
 
