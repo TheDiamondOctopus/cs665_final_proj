@@ -21,7 +21,7 @@
         $LastName = $_POST['lastName'];
         $EmailAddress = $_POST['emailAddress'];
         $Department = $_POST['department'];
-        $StartDate = $_POST['startDate'];
+        $StartDate = $_POST['date'];
 
         /* Set up the parameterized query. */  
         $tsql = "INSERT INTO Employee   
