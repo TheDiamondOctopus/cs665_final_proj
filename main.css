@@ -2,7 +2,7 @@ body{
     margin: 50px;
 }
 
-.datepicker datepicker-dropdown dropdown-menu datepicker-orient-left datepicker-orient-bottom {
+div.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-bottom {
     top: 160px; 
     left: 50px
 }
