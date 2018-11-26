@@ -75,7 +75,7 @@ $(document).ready(function(){
          */
         $.ajax({
             type: 'POST',
-            url: 'Submit.php', 
+            url: 'SubmitForm.php', 
             data: $(this).serialize()
         })
         .done(function(data){
@@ -106,7 +106,7 @@ $(document).ready(function(){
 <body>
     <h1>New Employee Form</h1>
     <br>
-    <form class="needs-validation" id='newEmployeeForm' novalidate>
+    <form class="needs-validation" id='newEmployeeForm'>
 <!--         <form class="needs-validation" id="newEmployeeForm" novalidate action="Submit.php" method="post"> ***old one***
  -->
         <!-- The below is for the Employee name, includes First and Last Names -->
