@@ -26,9 +26,8 @@
 
 <div class="container">
               <!--   <div class="row"> -->
-                    <table class="table">
-<!--                     <table class="text-center" style="align-content: center">
- -->
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
                     <tr>
                         <th>First Name</th>
                         <th>Last Name</th>
@@ -36,6 +35,7 @@
                         <th>Department</th>
                         <th>Start Date</th>
                     </tr>
+                    </thead>
                     <?php
                     try {
                         $conn = new PDO("sqlsrv:server = tcp:final-proj-t1.database.windows.net,1433; Database = final_proj_t1", "joey", "{#Kangar88}");
@@ -66,9 +66,9 @@
                         echo "</tr>";
                     }
                     ?>
-                    </table>
+                </table>
               <!--   </div> -->
                 </div>
 
-                </body>
+</body>
 <html>
