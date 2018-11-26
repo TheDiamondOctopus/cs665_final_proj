@@ -39,22 +39,22 @@ body{
     position: absolute;
   }
   .datepicker-dropdown.datepicker-orient-left:before {
-    left: 6px;
+    left: 0px;
   }
   .datepicker-dropdown.datepicker-orient-left:after {
-    left: 7px;
+    left: 0px;
   }
   .datepicker-dropdown.datepicker-orient-right:before {
-    right: 6px;
+    right: 0px;
   }
   .datepicker-dropdown.datepicker-orient-right:after {
-    right: 7px;
+    right: 0px;
   }
   .datepicker-dropdown.datepicker-orient-top:before {
-    top: -7px;
+    top: 0px;
   }
   .datepicker-dropdown.datepicker-orient-top:after {
-    top: -6px;
+    top: 0px;
   }
   .datepicker-dropdown.datepicker-orient-bottom:before {
     bottom: -7px;
