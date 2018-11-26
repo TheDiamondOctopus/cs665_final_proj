@@ -26,7 +26,7 @@
 
 <div class="container">
                 <div class="row">
-                    <table>
+                    <table class="employeeTable">
 <!--                     <table class="text-center" style="align-content: center">
  -->
                     <tr>
