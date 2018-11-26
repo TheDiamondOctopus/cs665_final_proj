@@ -2,7 +2,7 @@ body{
     margin: 50px;
 }
 
-.employeeTable, td, th {    
+.employeeTable, tr, th {    
     border: 1px solid #ddd;
     text-align: left;
 }
@@ -12,6 +12,6 @@ body{
     width: 100%;
 }
 
-th, td {
+th, tr {
     padding: 15px;
 }

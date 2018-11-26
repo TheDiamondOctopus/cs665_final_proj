@@ -25,7 +25,7 @@
 
 
 <div class="container">
-                <div class="row">
+              <!--   <div class="row"> -->
                     <table class="employeeTable">
 <!--                     <table class="text-center" style="align-content: center">
  -->
@@ -67,7 +67,7 @@
                     }
                     ?>
                     </table>
-                </div>
+              <!--   </div> -->
                 </div>
 
                 </body>
