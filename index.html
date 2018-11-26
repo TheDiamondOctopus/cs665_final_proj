@@ -78,6 +78,9 @@ $(document).ready(function(){
          * $(this).serialize() - to easily read form data
          * function(data){... - data contains the response from post_receiver.php
          */
+
+        var b = false;  
+
         $.ajax({
             type: 'POST',
             url: 'SubmitForm.php', 
@@ -88,6 +91,8 @@ $(document).ready(function(){
             // show the response
             /* $('#response').html(data); */
             console.log("succeeded")
+            alert("Form Submitted")
+            $('#index').html;
              
         })
         .fail(function() {
@@ -98,7 +103,7 @@ $(document).ready(function(){
         });
  
         // to prevent refreshing the whole page
-        return true;
+        return b;
  
     });
 });
