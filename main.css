@@ -2,12 +2,9 @@ body{
     margin: 50px;
 }
 
-.employeeTable {    
+table {    
     border: 1px solid #ddd;
     text-align: left;
-}
-
-.employeeTable {
     border-collapse: collapse;
     width: 100%;
 }
