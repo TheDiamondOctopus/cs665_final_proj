@@ -1,5 +1,10 @@
 <html>
 <body>
+
+    <form action="https://cs665phptest1.azurewebsites.net/">
+        <input type="submit" value="New Employee Form"/>
+    </form>
+
         <?php  
         /* Connect to the local server using Windows Authentication and  
         specify the AdventureWorks database as the database in use. */  
