@@ -38,7 +38,7 @@
 
     <script>
         $(document).ready(function(){
-          var date_input=$('input[name="startDate"]'); //our date input has the name "startDate"
+          var date_input=$('input[name="date"]'); //our date input has the name "date"
           var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
           var options={
             format: 'mm/dd/yyyy',
@@ -117,7 +117,7 @@
         <label for="date">Start Date</label>
         <div class="form-row">
                 <div class="form-group"> <!-- Date input -->
-                    <input class="form-control" id="date" name="startDate" placeholder="MM/DD/YYY" type="text"/>
+                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
                   </div>
         </div>    
 
