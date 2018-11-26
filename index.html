@@ -81,7 +81,8 @@ $(document).ready(function(){
         .done(function(data){
              
             // show the response
-            $('#response').html(data);
+            /* $('#response').html(data); */
+            console.log("succeeded")
              
         })
         .fail(function() {
@@ -105,7 +106,7 @@ $(document).ready(function(){
 <body>
     <h1>New Employee Form</h1>
     <br>
-    <form class="needs-validation" id="newEmployeeForm" novalidate>
+    <form class="needs-validation" id='newEmployeeForm' novalidate>
 <!--         <form class="needs-validation" id="newEmployeeForm" novalidate action="Submit.php" method="post"> ***old one***
  -->
         <!-- The below is for the Employee name, includes First and Last Names -->
@@ -157,7 +158,9 @@ $(document).ready(function(){
                 <div class="form-group"> <!-- Date input -->
                     <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
                   </div>
-        </div>    
+        </div>
+        
+        <br>
 
         <input class="btn btn-primary" type="submit" value="Submit Form">
         
