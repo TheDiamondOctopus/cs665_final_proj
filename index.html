@@ -66,6 +66,7 @@
         }
         </script>
 
+<!-- The below script hanldes taking the data in the form and passing it to SubmitForm.php, which posts the data to the DB -->
  <script>
 $(document).ready(function(){
     $('#newEmployeeForm').submit(function(){
@@ -97,7 +98,7 @@ $(document).ready(function(){
         });
  
         // to prevent refreshing the whole page
-        return false;
+        return true;
  
     });
 });
