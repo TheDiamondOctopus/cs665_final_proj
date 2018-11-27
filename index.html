@@ -118,7 +118,7 @@ $(document).ready(function(){
 <script>
   function successDiv(){
     document.getElementById("formSubmittedDiv").style.display = "block";
-    setTimeout(function(){$('#formSubmittedDiv').fadeout();}, 3000);
+    $('#formSubmittedDiv').delay(3000).fadeout();
     document.getElementById("newEmployeeForm").reset();
 
   }
