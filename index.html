@@ -117,7 +117,7 @@ $(document).ready(function(){
 <!-- The below displays a message to the user that the form was submitted successfully, and resets the form fields. -->
 <script>
   function successDiv(){
-    // document.getElementById("formSubmittedDiv").style.display = "block";
+    document.getElementById("formSubmittedDiv").style.display = "block";
     $("alert-submit-success").delay(3000).fadeOut();
     document.getElementById("newEmployeeForm").reset();
 
