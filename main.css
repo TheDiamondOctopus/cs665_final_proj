@@ -1,9 +1,15 @@
-body{
+body {
     margin: 50px;
 }
 
-element.style{
+element.style {
     top: 160px !important;
     left: 50px !important;
     display: block !important;
 } 
+
+.alert-submit-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}

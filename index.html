@@ -117,15 +117,12 @@ $(document).ready(function(){
 <!-- The below displays a message to the user that the form was submitted successfully, and resets the form fields. -->
 <script>
   function successDiv(){
-    document.getElementById("formSubmittedDiv").style.display = "block";
+    // document.getElementById("formSubmittedDiv").style.display = "block";
+    $("alert-submit-success").delay(3000).fadeOut();
     document.getElementById("newEmployeeForm").reset();
+
   }
 </script>
-
-
-
-<!-- The below display a message to the user that the form failed to submit, and does NOT reset the fields -->
-
 
     <title>New Employee Form</title>
 </head>
@@ -221,8 +218,8 @@ $(document).ready(function(){
       <br>
       <br>
 
-      <div id="formSubmittedDiv" style="display: none;">
-        Form Submitted Successfully!
+      <div class="alert-submit-success" id="formSubmittedDiv" style="display: none;">
+        <strong>Form Submitted Successfully!</strong>
       </div>
 
 </body>
