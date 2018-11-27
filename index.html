@@ -118,7 +118,7 @@ $(document).ready(function(){
 <script>
   function successDiv(){
     document.getElementById("formSubmittedDiv").style.display = "block";
-    setTimeout(function(){$('#formSubmittedDiv').fadeout();}, 3000)
+    setTimeout(function(){$('#formSubmittedDiv').fadeout();}, 3000);
     document.getElementById("newEmployeeForm").reset();
 
   }
@@ -218,7 +218,12 @@ $(document).ready(function(){
       <br>
       <br>
 
-      <div class="alertSuccess" id="formSubmittedDiv" style="display: none;">
+      <div  class="alertSuccess" 
+            id="formSubmittedDiv" 
+            style=" display: none; 
+                    color: #155724;
+                    background-color: #d4edda;
+                    border-color: #c3e6cb;">
         <strong>Form Submitted Successfully!</strong>
       </div>
 
