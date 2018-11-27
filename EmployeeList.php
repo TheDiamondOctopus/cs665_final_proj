@@ -25,6 +25,9 @@
 
 
 <div class="container">
+    <br>
+        <h1>New BU COM Employees</h1>
+    <br>
               <!--   <div class="row"> -->
                 <table class="table table-bordered">
                     <thead class="thead-dark">
