@@ -51,7 +51,7 @@
                     $serverName = "tcp:final-proj-t1.database.windows.net,1433";
                     $conn = sqlsrv_connect($serverName, $connectionInfo);
 
-                    $sql = "SELECT * FROM Employee";
+                    $sql = "SELECT * FROM Employee ORDER BY StartDate";
                     $stmt = sqlsrv_query($conn, $sql);
                     if ($stmt === false) {
                         die(print_r(sqlsrv_errors(), true));
