@@ -132,7 +132,7 @@ $(document).ready(function(){
 <body>
     <h1>New Employee Form</h1>
     <br>
-    <form class="needs-validation" id='newEmployeeForm' novalidate>
+    <form class="needs-validation" id='newEmployeeForm'>
 <!--         <form class="needs-validation" id="newEmployeeForm" novalidate action="Submit.php" method="post"> ***old one***
  -->
         <!-- The below is for the Employee name, includes First and Last Names -->
@@ -140,35 +140,35 @@ $(document).ready(function(){
         <div class="form-row">
                 <div class="col-md-4 mb-3">
                         <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" value="" required>
-                        <div class="valid-feedback">
+                        <!-- <div class="valid-feedback">
                           Looks good!
                         </div>
                         <div class="invalid-feedback">
                           Please enter a first name.
-                        </div>
-                      </div>
+                        </div> -->
+                    </div> 
                 <div class="col-md-4 mb-3">
                         <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" value="" required>
-                        <div class="valid-feedback">
+                        <!-- <div class="valid-feedback">
                           Looks good!
                         </div>
                         <div class="invalid-feedback">
                           Please enter a last name.
-                        </div>
-                      </div>
+                        </div> -->
+                    </div>
         </div>  
         <!-- This is the Employee's BU Email Address -->
         <label for="inputEmail">BU Email Address</label>
         <div class="form-row">
                 <div class="col-md-4 mb-3">
                         <input type="text" class="form-control" id="inputEmail" name="emailAddress" placeholder="Email" required>
-                        <div class="valid-feedback">
+                        <!-- <div class="valid-feedback">
                           Looks good!
                         </div>
                         <div class="invalid-feedback">
                           Please enter an email address.
-                        </div>
-                      </div>
+                        </div> -->
+                    </div>
         </div> 
         <!-- This is for the Employee's Department in the College of Communication (COM) -->
         <label for="departmentSelection">Department</label>
@@ -192,10 +192,10 @@ $(document).ready(function(){
         <div class="form-row">
                 <div class="form-group"> <!-- Date input -->
                     <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" required/>
-                  </div>
-                  <div class="invalid-feedback">
+                </div>
+                  <!-- <div class="invalid-feedback">
                     Please choose a start date.
-                  </div>
+                  </div> -->
         </div>   
 
         <br>
