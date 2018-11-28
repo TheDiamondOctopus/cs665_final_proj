@@ -117,7 +117,8 @@ $(document).ready(function(){
 <!-- The below displays a message to the user that the form was submitted successfully, and resets the form fields. -->
 <script>
   function successDiv(){
-    document.getElementById("formSubmittedDiv").style.display = "block";
+    //document.getElementById("formSubmittedDiv").style.display = "block";
+    $('#formSubmittedDiv').show();//.delay().hide();
     document.getElementById("newEmployeeForm").reset();
 
   }
